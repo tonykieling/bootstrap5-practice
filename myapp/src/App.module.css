@@ -1,0 +1,8 @@
+.rowSetting:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.rowSetting:hover {
+  background-color: aquamarine;
+  color: brown;
+}

@@ -1,4 +1,7 @@
-import {useState} from "react";
+import { useState } from "react";
+
+// it seems the identifier do not accept "row-setting", which would be a better css class name
+import { rowSetting } from "./App.module.css";
 
 // const CssStyle = {
 //   nthChild(even) {
@@ -43,6 +46,7 @@ function App() {
       return (
         <tr 
           key   = {i}
+          className = { rowSetting }
           >
           <td
             style = {{border: "1px solid #dddddd", textAlign: "center"}}
