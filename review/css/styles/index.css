@@ -1,0 +1,62 @@
+body {
+  background-color: cadetblue;
+  padding: 1rem;
+}
+
+/* section introduction */
+#introduction {
+  color: brown;
+}
+
+/* #introduction h1 { */
+article h1 {
+  font-size: 2rem;
+}
+
+article {
+  margin: 3rem 0;
+}
+
+.inside-section {
+  margin: 0 1rem;
+}
+
+.inside-section a:link {
+  color: green;
+}
+
+.inside-section a:visited {
+  color: red;
+}
+
+.inside-section a:focus {
+  color: blue;
+}
+
+.inside-section a:hover {
+  color: rgb(219, 204, 204);
+  background-color: gray;
+  /* text-decoration: none;  */  /* this line removes the underline on links*/
+}
+
+.inside-section a:active {
+  color: black;
+}
+
+.left-space {
+  margin-left: 2rem;
+}
+
+.h3-subtitle {
+  margin-top: 1rem;
+}
+
+.inside-section .a-btn {
+  padding: 0.5rem;
+  background: rgb(47, 48, 97);
+  border-radius: 4px;
+}
+.inside-section .a-btn:hover {
+  background: rgba(47, 48, 97, 50%);
+  cursor: pointer;
+}

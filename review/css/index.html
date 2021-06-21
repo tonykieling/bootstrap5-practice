@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>CSS</title>
+</head>
+<body>
+
+  <!-- h1 and h2 has diffrent size, but inside section, article and others, they have the same
+  <h1>H1 example</h1>
+  <h2>H2 example</h2> -->
+
+  <article id="introduction">
+    <h1>Name and Surname</h1>
+    <p>It is a quick biography, etc, etc...</p>
+  </article>
+
+  <article id="work-experience">
+    <h2>Work experiences are:</h2>
+    <ul>
+      <li class="work-experience"></li>
+      <li class="work-experience"></li>
+      <li class="work-experience"></li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>Pseudo-class selectors</h2>
+    <section class="inside-section">
+      <p>They are used to define a special state  of an element, such as hover, focus, visited links and so on.</p>
+      <div><b>- Its syntaxe: </b></div>
+      <code class="w3-codespan left-space">
+        selector:pseudo-class {
+          property: value;
+        }
+      </code>
+      <div><b>- Example: </b></div>
+      <code class="w3-codespan left-space">
+        .ok-button:hover { 
+          color: blue; 
+          margin: 0;
+        }
+      </code>
+      <h3 class="h3-subtitle">Links situations regarding pseudo-class</h3>
+      <a href="#1">Link 1</a>
+      <a href="#1">Link 2</a>
+      <a href="#3">Link 3</a>
+      <a href="#5">Link 4</a>
+      <a href="#6">Link 5</a>
+      <a href="#7">Link 6</a>
+
+      <p>
+        This is an 'a' link in the form of a button: <span><a class="a-btn">Click here</a></span>
+      </p>
+    </section>
+  </article>
+  
+</body>
+</html>
