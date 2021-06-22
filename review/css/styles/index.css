@@ -1,7 +1,17 @@
+/* all document */
 body {
   background-color: cadetblue;
   padding: 1rem;
 }
+
+/* title */
+.main-title {
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: underline;
+  color: darkred;
+}
+
 
 /* section introduction */
 #introduction {
@@ -56,7 +66,63 @@ article {
   background: rgb(47, 48, 97);
   border-radius: 4px;
 }
+
 .inside-section .a-btn:hover {
   background: rgba(47, 48, 97, 50%);
   cursor: pointer;
+}
+
+
+pre {
+  background-color: #ddd;
+  border: 1px solid #999;
+  display: block;
+  /* padding: 5px; */
+  margin: 0;
+}
+
+code {
+  background-color: #ddd;
+  border: 1px solid #999;
+  display: block;
+  /* padding: 5px; */
+  margin: 0;
+}
+
+.examples {
+  font-size: larger;
+  font-weight: bolder;
+  text-decoration: underline;
+  margin: 2rem 0 1rem;
+}
+
+.nesting-items {
+  font-weight: bold;
+  color: red;
+}
+
+/* descendent selector CSS */
+.descendent-selector p {
+  margin: 0;
+  background-color: blue;
+  color: darkred;
+}
+
+/* child selector CSS */
+div > span {
+  color: gold;
+  background-color: indigo;
+}
+
+/* Adjacent sibling selector */
+div + p {
+  background-color: sandybrown;
+  text-align: center;
+}
+
+/* General sibling selector */
+div ~ .m1, .m2 {
+  text-align: right;
+  color: aquamarine;
+  background-color: gray;
 }

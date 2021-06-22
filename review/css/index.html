@@ -10,41 +10,185 @@
 </head>
 <body>
 
-  <!-- h1 and h2 has diffrent size, but inside section, article and others, they have the same
-  <h1>H1 example</h1>
-  <h2>H2 example</h2> -->
+  <h1 class="main-title">CSS review</h1>
 
-  <article id="introduction">
-    <h1>Name and Surname</h1>
-    <p>It is a quick biography, etc, etc...</p>
-  </article>
-
-  <article id="work-experience">
-    <h2>Work experiences are:</h2>
-    <ul>
-      <li class="work-experience"></li>
-      <li class="work-experience"></li>
-      <li class="work-experience"></li>
-    </ul>
+  <article>
+    <h2>CSS Box Model</h2>
   </article>
 
   <article>
-    <h2>Pseudo-class selectors</h2>
+    <h2>CSS Units</h2>
+  </article>
+
+  <article>
+    <h2>1- Nesting selectors</h2>
+    <section class="inside-section">
+      <p>There are 4 types of combinators in CSS:</p>
+      <ol>
+        <li>Descendent selector --> <span class="nesting-items">space</span> </li>
+        <li>Child selector --> <span class="nesting-items">></span> </li>
+        <li>Adjacent sibling selector --> <span class="nesting-items">+</span> </li>
+        <li>General sibling selector --> <span class="nesting-items">~</span> </li>
+      </ol>
+    
+      <!-- example of descendent-selector -->
+      <div class="examples">Example 1 - descendent selector: &ltspace></div>
+      <span><b>Code</b></span>
+      <code>
+        HTML:
+        <pre>
+          &ltdiv class="descendent-selector">
+            &ltp>Test - with style&lt/p>
+          &lt/div>
+          &ltp>Test - without style&lt/p>&ltdiv class="descendent-selector">
+            &ltp>Test - with style&lt/p>
+          &lt/div></pre>
+        CSS:
+        <pre>
+          .descendent-selector p {
+            margin: 0;
+            background-color: blue;
+            color: darkred;
+          }</pre>
+      </code>
+  
+      <span><b>Output:</b></span>
+      <code>
+        <div class="descendent-selector">
+          <p>Test - with style</p>
+        </div>
+        <p>Test - without style</p>
+        <div class="descendent-selector">
+          <p>Test - with style</p>
+        </div>
+      </code>
+    
+
+      <!-- example of child selector -->
+      <div class="examples">Example 2 - child selector: +</div>
+      <span><b>Code</b></span>
+      <code>
+        HTML:
+        <pre>
+          &ltdiv>
+            &ltp>This is 'p' inside a 'div'&ltspan> - and this is a 'span' inside that 'p'&lt/span>&lt/p>
+            &ltspan>And this is a 'span' inside, child, a div.&lt/span>
+          &lt/div></pre>
+        CSS:
+        <pre>
+          div > span {
+            color: gold;
+            background-color: indigo;
+          }
+        </pre>
+      </code>
+  
+      <span><b>Output:</b></span>
+      <code>
+        <div>
+          <p>This is 'p' inside a 'div'<span> - and this is a 'span' inside that 'p'</span></p>
+          <span>And this is a 'span' inside, child, a div.</span>
+        </div>
+      </code>
+
+      <!-- example of sibling selector -->
+      <div class="examples">Example 3 - adjacent sibling selector: ~</div>
+      <span><b>Code</b></span>
+      <code>
+        HTML:
+        <pre>
+          &ltdiv>
+            &ltp>'p' line 1 inside 'div'&lt/p>
+            &ltp>'p' line 2 inside 'div'&lt/p>
+          &lt/div>
+          &ltp>'p' line 3 outside, right after, a 'div'&lt/p>
+          &ltp>'p' line 4 outside 'div'&lt/p>
+          &ltdiv>
+            &ltp>'p' line 5 inside 'div'&lt/p>
+          &lt/div>
+          &ltp>'p' line 6 outside, right after, a 'div'&lt/p></pre>
+        CSS:
+        <pre>
+          div + p {
+            background-color: sandybrown;
+            text-align: center;
+          }
+        </pre>
+      </code>
+  
+      <span><b>Output:</b></span>
+      <code>
+        <div>
+          <p>'p' line 1 inside 'div'</p>
+          <p>'p' line 2 inside 'div'</p>
+        </div>
+        <p>'p' line 3 outside, right after, a 'div'</p>
+        <p>'p' line 4 outside 'div'</p>
+        <div>
+          <p>'p' line 5 inside 'div'</p>
+        </div>
+        <p>'p' line 6 outside, right after, a 'div'</p>
+      </code>
+
+      <!-- example of general sibling selector -->
+      <div class="examples">Example 4 - general sibling selector</div>
+      <span><b>Code</b></span>
+      <code>
+        HTML:
+        <pre>
+          &ltdiv>
+            It is a 'div'
+          &lt/div>
+          &ltdiv class="m1">this is a 'div' which selector is a class called 'm1'&lt/div>
+          &ltp class="m1">It is a 'p' class = 'm1'&lt/p>
+          &lth4>this is a plain 'h4'&lt/h4>
+          &lth3 class="m2">a 'h3' class = 'm2'&lt/h3></pre>
+        CSS:
+        <pre>
+          div ~ .m1, .m2 {
+            text-align: right;
+            color: aquamarine;
+            background-color: gray;
+          }
+        </pre>
+      </code>
+  
+      <span><b>Output:</b></span>
+      <code>
+        <div>
+          It is a 'div'
+        </div>
+        <div class="m1">this is a 'div' which selector is a class called 'm1'</div>
+        <p class="m1">It is a 'p' class = 'm1'</p>
+        <h4>this is a plain 'h4'</h4>
+        <h3 class="m2">a 'h3' class = 'm2'</h3>
+      </code>
+
+    </section>
+  </article>
+
+
+
+  <!-- Pseudo-class article -->
+  <article>
+    <h2>2- Pseudo-class selectors</h2>
     <section class="inside-section">
       <p>They are used to define a special state  of an element, such as hover, focus, visited links and so on.</p>
       <div><b>- Its syntaxe: </b></div>
-      <code class="w3-codespan left-space">
-        selector:pseudo-class {
-          property: value;
-        }
-      </code>
+      <!-- <code class="w3-codespan left-space"> -->
+      <pre>
+  selector:pseudo-class {
+    property: value;
+  }
+</pre>
       <div><b>- Example: </b></div>
-      <code class="w3-codespan left-space">
-        .ok-button:hover { 
-          color: blue; 
-          margin: 0;
-        }
-      </code>
+      <!-- <pre class="w3-codespan left-space"> -->
+      <pre>
+  .ok-button:hover { 
+    color: blue; 
+    margin: 0;
+  }
+</pre>
       <h3 class="h3-subtitle">Links situations regarding pseudo-class</h3>
       <a href="#1">Link 1</a>
       <a href="#1">Link 2</a>
@@ -57,7 +201,35 @@
         This is an 'a' link in the form of a button: <span><a class="a-btn">Click here</a></span>
       </p>
     </section>
+    <p>*** More info about Pseudo-classes at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">MDN Pseudo-Classes</a></p>
+  </article>
+
+
+  <article>
+    <h2>3- CSS Layout - display property</h2>
+    <h2>Block-level elements</h2>
+    <h2>Inline elemnts</h2>
+  </article>
+
+  <article>
+    <h2>4- CSS Position</h2>
+    static
+    relative
+    fixed
+    absolute
+    sticky
+  </article>
+
+  <article>
+    <h2>5- CSS Grid</h2>
+  </article>
+
+  <article>
+    <h2>6- CSS Flexbox</h2>
   </article>
   
+  <article>
+    <h2>Website layout (w3schools</h2>
+  </article>
 </body>
 </html>
