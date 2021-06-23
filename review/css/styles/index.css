@@ -126,3 +126,13 @@ div ~ .m1, .m2 {
   color: aquamarine;
   background-color: gray;
 }
+
+
+/* picture settings */
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-width: 260px;
+}
