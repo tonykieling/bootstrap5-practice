@@ -28,17 +28,66 @@
         class="img-center"
         alt="box-model" 
       >
-      <p>The full size of an element has to consider not only the content width and height, but also padding, border and margin.</p>
+      <p style="text-align: center; color: darkred;"><b>The full size of an element has to consider not only the content width and height, but also padding and border.</b></p>
+      <p><b>Margin</b> counts to the space taken by an element, not specificaly for its total size.</p>
+      <p><b>Outline</b> is a property that draws a border without modifying the size of the element - border does it.</p>
+
+      <h3 class="top-margin">Box Model Properties:</h3>
+      <section class="inside-section">
+        <div>
+          <div style="display: inline-block; outline: 1px solid rgb(10, 121, 121);">
+            <li><b>Height</b> is relative to the vertical size of an element's content.</li>
+            <li><b>Width</b> is the horizontal size of that element.</li>
+          </div>
+          <!-- waiting for flexbox or grid to center this span in the middle (vertically) -->
+          <span style="display: inline-block;">they change the size of block elements</span>
+        </div>
+        <li><b>Margin</b> is the space around the border of an element. It is always transparent.</li>
+        <li><b>Border</b> is the framework around the content. It can be colored and in diff forms such as solid and pointed.</li>
+        <li><b>Padding</b> is the space around the content of an element.</li>
+      </section>
+    </section>
+
+    <!-- <div class="tkc">
+      container
+      <div class="tk">
+        div
+      </div>
+    </div> -->
+
+    <section class="inside-section">
+      <h3 class="top-margin">Inline Elements</h3>
+      <section class="inside-section">
+        <p>They take up the same space as their content. It changes line when it is not possible to fit in that line.</p>
+        <p><b>Examples</b> are &lta>, &ltspan> and &ltstrong></p>
+      </section>
+
+      <h3 class="top-margin">Block Elements</h3>
+      <section class="inside-section">
+        <p>They expand to the whole width of their container element, regardles of thei content width. It means that a block element always start a new line.</p>
+        <p><b>Examples</b> are &ltdiv>,  &lth1>, &ltp> and &ltsection></p>
+      </section>
+
+      <h3 class="top-margin">Display Property</h3>
+      <section class="inside-section">
+        <p>It is used to change de default behavior of inline and block-level elements.</p>
+        <p><code style="display: inline;">Display: inline</code> will turn a block element into a inline one.</p>
+        <p><code style="display: inline-block; width: 250px;">Display: inline-block</code> will turn a block element into a inline one being possible to set the size.</p>
+        <p><code>Display: block</code> will turn a inline element into a block one.</p>
+      </section>
     </section>
   </article>
 
   <article>
     <h2>2- CSS Position</h2>
-    static
-    relative
-    fixed
-    absolute
-    sticky
+    <p>asdasd</p>
+    <ul>
+      <li><b>Static</b> is the default position in CSS/HTML.</li>
+      <li><b>Relative</b> does the same thing as Static, but it is possible to change top, right, bottom and left values. It removes the element from the document flow, that means it does not move the other adjacents elements.</li>
+      <li><b>Absolute</b> is . It keeps its position since when it was rendered.</li>
+      <li><b>Fixed</b> is . It keeps its position relativelly to the document.</li>
+      <li><b>Sticky</b> is .</li>
+    </ul>
   </article>
 
   <article>
@@ -100,11 +149,11 @@
         <pre>
           &ltdiv>
             &ltp>This is 'p' inside a 'div'&ltspan> - and this is a 'span' inside that 'p'&lt/span>&lt/p>
-            &ltspan>And this is a 'span' inside, child, a div.&lt/span>
+            &ltspan class="span-temp">And this is a 'span' inside, child, a div.&lt/span>
           &lt/div></pre>
         CSS:
         <pre>
-          div > span {
+          div > .span-temp {
             color: gold;
             background-color: indigo;
           }
@@ -115,7 +164,7 @@
       <code>
         <div>
           <p>This is 'p' inside a 'div'<span> - and this is a 'span' inside that 'p'</span></p>
-          <span>And this is a 'span' inside, child, a div.</span>
+          <span class="span-temp">And this is a 'span' inside, child, a div.</span>
         </div>
       </code>
 
@@ -192,6 +241,33 @@
         <h3 class="m2">a 'h3' class = 'm2'</h3>
       </code>
 
+      <!-- example of general sibling selector -->
+      <div class="examples">Example 5 - application of multiples classes</div>
+      <span><b>Code</b></span>
+      <code>
+        HTML:
+        <pre>
+          &ltdiv class="ex1 ex2">
+            It is a example that applies 2 classes at the same time.
+          &lt/div>
+        </pre>
+        CSS:
+        <pre>
+          .ex1 {
+            color: white;
+          }
+          .ex2 {
+            background-color: black;
+          }
+        </pre>
+      </code>
+  
+      <span><b>Output:</b></span>
+      <code>
+        <div class="ex1 ex2">
+          It is a example that applies 2 classes at the same time.
+        </div>
+      </code>
     </section>
   </article>
 
