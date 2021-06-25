@@ -152,17 +152,3 @@ code {
   margin-top: 2rem;
 }
 
-
-.tkc {
-  height: 100px;
-  border: 2px solid red;
-  box-sizing: border-box;
-}
-.tk {
-  background-color: blueviolet;
-  height: 15%;
-  width: 80%;
-  border: 1px solid blue;
-  padding: 10px 30px 20px;
-  margin: 50px 20px;
-}

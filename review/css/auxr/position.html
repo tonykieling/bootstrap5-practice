@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS - position</title>
+  <style>
+    body {
+      height: 1000px;
+      margin: 0 auto 0 0;
+    }
+
+    .d1 {
+      position: absolute;
+      background-color: red;
+      width: 600px;
+    }
+
+    .d2 {
+      position: relative;
+      background-color: blue;
+      width: 500px;
+    }
+
+    .d3 {
+      position: static;
+      background-color: green;
+      width: 400px;
+    }
+
+    .d4 {
+      position: fixed;
+      background-color: yellow;
+      width: 300px;
+    }
+
+    .d5 {
+      position: sticky;
+      background-color: grey;
+      width: 200px;
+    }
+
+    .parent {
+      position: relative;
+      /* top: 100px; */
+      background-color: grey;
+      width: 500px; 
+      /* height: 400px;  */
+      height: 614px; 
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .child {
+      position: absolute;
+      /* text-align: center; */
+      background-color: indigo;
+      width: 400px;
+      height: 300px;
+      margin: auto;
+      bottom: 50px;
+      left: 50px
+    }
+    .child1 {
+      background-color: green;
+      width: 200px;
+      height: 100px;
+      position: absolute;
+      left: 100px;
+      bottom: 100px;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- <div class="d1">
+    Absolute
+    <div class="d2">
+      Relative
+    </div>
+    <div class="d3">
+      Static
+    </div>
+    <div class="d4">
+      Fixed
+    </div>
+    <div class="d5">
+      Sticky
+    </div>
+  </div> -->
+  
+  <div class="parent">
+    <div class="child">
+      <div class="child1">
+        <div >
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="child"></div>
+  <div class="child1"></div> -->
+
+  <script>    
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max( body.scrollHeight, body.offsetHeight, 
+                      html.clientHeight, html.scrollHeight, html.offsetHeight );
+    
+    console.log("b=>", height);
+    console.log(innerHeight)
+  </script>
+
+</body>
+</html>

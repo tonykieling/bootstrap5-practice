@@ -48,12 +48,6 @@
       </section>
     </section>
 
-    <!-- <div class="tkc">
-      container
-      <div class="tk">
-        div
-      </div>
-    </div> -->
 
     <section class="inside-section">
       <h3 class="top-margin">Inline Elements</h3>
@@ -81,12 +75,26 @@
   <article>
     <h2>2- CSS Position</h2>
     <p>asdasd</p>
+    <a href="./auxr/position.html" alt="CSS Position" target="blank">CSS Position link</a>
     <ul>
-      <li><b>Static</b> is the default position in CSS/HTML.</li>
-      <li><b>Relative</b> does the same thing as Static, but it is possible to change top, right, bottom and left values. It removes the element from the document flow, that means it does not move the other adjacents elements.</li>
-      <li><b>Absolute</b> is . It keeps its position since when it was rendered.</li>
-      <li><b>Fixed</b> is . It keeps its position relativelly to the document.</li>
-      <li><b>Sticky</b> is .</li>
+      <li style="margin-bottom: 1rem;"><b>Static</b> is when the element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value for any html element.</li>
+      
+      <li style="margin-bottom: 1rem;"><b>Relative</b> element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static. This value creates a new stacking context when the value of z-index is not auto. Its effect on table-*-group, table-row, table-column, table-cell, and table-caption elements is undefined.
+        <p><b>Relative keeps the flow of the document and it is possible to use z-index, top, right, etc.</b></p>
+      </li>
+
+      <li style="margin-bottom: 1rem;"><b>Absolute</b> element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block (most of the time is body). Its final position is determined by the values of top, right, bottom, and left. This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins.
+        <p><b>Absolute element takes off the flow of the document and it will take the reference of the first parent(s) element which is relative positioned.</b></p>
+      </li>
+
+      <li style="margin-bottom: 1rem;"><b>Fixed</b> element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a transform, perspective, or filter property set to something other than none (see the CSS Transforms Spec), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with perspective and filter contributing to containing block formation.) Its final position is determined by the values of top, right, bottom, and left. This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page.
+      </li>
+
+      <li style="margin-bottom: 1rem;"><b>Sticky</b> element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements. This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavio</li>
+
+      <p>All elements can be positioned, unless the static position one.</p>
+      <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" alt="MDN" target="blank">MDN - CSS Position</a></p>
+      <p>Source: <a href="https://www.youtube.com/watch?v=P6UgYq3J3Qs" alt="Youtube" target="blank">Youtube video</a></p>
     </ul>
   </article>
 
