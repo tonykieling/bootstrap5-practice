@@ -45,6 +45,8 @@
         <li><b>Margin</b> is the space around the border of an element. It is always transparent.</li>
         <li><b>Border</b> is the framework around the content. It can be colored and in diff forms such as solid and pointed.</li>
         <li><b>Padding</b> is the space around the content of an element.</li>
+
+        <p><cite><b>box-sizing: border-box</b></cite> changes the size of the box to the size of the actual content box (which will shrink it).</p>
       </section>
     </section>
 
@@ -66,36 +68,73 @@
       <section class="inside-section">
         <p>It is used to change de default behavior of inline and block-level elements.</p>
         <p><code style="display: inline;">Display: inline</code> will turn a block element into a inline one.</p>
-        <p><code style="display: inline-block; width: 250px;">Display: inline-block</code> will turn a block element into a inline one being possible to set the size.</p>
+        <p><code style="display: inline-block; width: 250px;">Display: inline-block</code> will turn a block element into a inline one being possible to set its size.</p>
         <p><code>Display: block</code> will turn a inline element into a block one.</p>
       </section>
     </section>
   </article>
 
   <article>
-    <h2>2- CSS Position</h2>
-    <p>asdasd</p>
-    <a href="./auxr/position.html" alt="CSS Position" target="blank">CSS Position link</a>
-    <ul>
-      <li style="margin-bottom: 1rem;"><b>Static</b> is when the element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value for any html element.</li>
-      
-      <li style="margin-bottom: 1rem;"><b>Relative</b> element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static. This value creates a new stacking context when the value of z-index is not auto. Its effect on table-*-group, table-row, table-column, table-cell, and table-caption elements is undefined.
-        <p><b>Relative keeps the flow of the document and it is possible to use z-index, top, right, etc.</b></p>
-      </li>
+    <h2>2- CSS Layout</h2>
 
-      <li style="margin-bottom: 1rem;"><b>Absolute</b> element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block (most of the time is body). Its final position is determined by the values of top, right, bottom, and left. This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins.
-        <p><b>Absolute element takes off the flow of the document and it will take the reference of the first parent(s) element which is relative positioned.</b></p>
-      </li>
 
-      <li style="margin-bottom: 1rem;"><b>Fixed</b> element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a transform, perspective, or filter property set to something other than none (see the CSS Transforms Spec), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with perspective and filter contributing to containing block formation.) Its final position is determined by the values of top, right, bottom, and left. This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page.
-      </li>
+    <section class="inside-section">
+      <h2>CSS Position</h2>
+      <p><a style="color: darkblue;" href="./auxr/position.html" alt="CSS Position" target="blank">CSS Position link</a></p>
+      <p><a style="color: darkblue;" href="./auxr/pos_grid.html" target="blank"> Position vs Grid</a></p>
+      <ul>
+        <li style="margin-bottom: 1rem;"><b>Static</b> is when the element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value for any html element.</li>
+        
+        <li style="margin-bottom: 1rem;"><b>Relative</b> element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static. This value creates a new stacking context when the value of z-index is not auto. Its effect on table-*-group, table-row, table-column, table-cell, and table-caption elements is undefined.
+          <p><b>Relative keeps the flow of the document and it is possible to use z-index, top, right, etc.</b></p>
+          <p><b>The trbl position is relative to their current/initial position.</b></p>
+        </li>
 
-      <li style="margin-bottom: 1rem;"><b>Sticky</b> element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements. This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavio</li>
+        <li style="margin-bottom: 1rem;"><b>Absolute</b> element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block (most of the time is body). Its final position is determined by the values of top, right, bottom, and left. This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins.
+          <p><b>Absolute element takes off the flow of the document and it will take the reference of the first parent(s) element which is relative positioned.</b></p>
+          <p>They are gonna be positioned according to its parent element.</p>
+        </li>
 
-      <p>All elements can be positioned, unless the static position one.</p>
+        <li style="margin-bottom: 1rem;"><b>Fixed</b> element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a transform, perspective, or filter property set to something other than none (see the CSS Transforms Spec), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with perspective and filter contributing to containing block formation.) Its final position is determined by the values of top, right, bottom, and left. This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page.
+        </li>
+
+        <li style="margin-bottom: 1rem;"><b>Sticky</b> element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements. This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavio</li>
+
+        <p>All elements can be positioned, unless the static position one.</p>
+        <br>
+
+        <div style="border: 1px solid blue; padding: 1rem;">
+          <p style="color: red; font-size: larger;">Heads up!! </p>
+          <cite><b>z-index</b></cite> works regarding the context. It means that it may not work properly, specialy in situations like child elements, or depends the type of position being used.</p>
+          <p>
+          <p>One good output is when all elements are sibblings of a parent element, which means that there is a context to be applied for the sibblings.</p>
+        </div>
+        <br>
+
       <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" alt="MDN" target="blank">MDN - CSS Position</a></p>
       <p>Source: <a href="https://www.youtube.com/watch?v=P6UgYq3J3Qs" alt="Youtube" target="blank">Youtube video</a></p>
     </ul>
+  </section class="inside-section">
+
+  <article>
+    <section class="inside-section">
+      <h2>Flexbox and Grid</h2>
+      <section class="inside-section">
+        <p><b>Flexbox</b> handles one dimension at at time - row or column.</p>
+        <p><b>Grid</b> works in two dimension, arraging multiple lines and columns at at time.</p>
+      </section>
+
+      <section class="inside-section">
+        <h2 style="text-decoration: underline;">Flexbox</h2>
+        
+      </section>
+  
+      <section class="inside-section">
+        <h2 style="text-decoration: underline;">Grid</h2>
+      </section>
+
+    </section>
+
   </article>
 
   <article>
@@ -317,20 +356,6 @@
   </article>
 
 
-  <article>
-    <h2>3- CSS Layout - display property</h2>
-    <h2>Block-level elements</h2>
-    <h2>Inline elemnts</h2>
-  </article>
-
-  <article>
-    <h2>5- CSS Grid</h2>
-  </article>
-
-  <article>
-    <h2>6- CSS Flexbox</h2>
-  </article>
-  
   <article>
     <h2>Website layout (w3schools</h2>
   </article>

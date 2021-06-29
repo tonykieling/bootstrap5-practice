@@ -70,6 +70,115 @@
       bottom: 100px;
     }
     
+    /* div {
+      margin: 10px;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      border: 10px solid black;
+      box-sizing: border-box;
+    } */
+
+    .c1 {
+      margin:   10px;
+      position: relative;
+      border:   2px solid black;
+      width:    200px;
+      height:   200px;
+    }
+
+    .c2 {
+      border:     2px solid blue;
+      width:      150px;
+      height:     150px;
+      margin:     25px;
+      box-sizing: border-box;
+    }
+
+    .c3 {
+      border:     2px solid red;
+      width:      100px;
+      height:     100px;
+      margin:     25px;
+      box-sizing: border-box;
+    }
+
+
+
+    .c4 {
+      margin: 10px;
+      border: 5px black solid;
+      width: 200px;
+      height: 100px;
+      z-index: 100;
+    }
+
+    .c5 {
+      width: 150px;
+      height: 75px;
+      /* bottom: 0;
+      right: 25px; */
+      margin-top: calc(25px - 5px);
+      margin-left: calc(25px - 5px);
+      border: 5px solid blue;
+      z-index: 0;
+    }    
+
+
+
+    .parentt {
+      position: relative;
+      width: 600px;
+      height: 200px;
+      border: violet 1px solid;
+    }
+    .first { 
+      border: solid 5px blue; 
+      position: absolute; 
+      width: 400px; 
+      height: 160px; 
+      box-sizing: border-box;
+      left: 100px; 
+      bottom: 0; 
+      /* z-index: 100; */
+    }
+    .second { 
+      border: solid 5px red; 
+      position: absolute; 
+      width: 300px; 
+      height: 120px; 
+      box-sizing: border-box;
+      left: 150px; 
+      bottom: 0; 
+      /* z-index: -1; */
+    }
+    .third { 
+      border: solid 5px green; 
+      position: absolute; 
+      box-sizing: border-box;
+      width: 225px; 
+      height: 90px; 
+      left: 187.5px; 
+      bottom: 0;
+      /* z-index: -2; */
+    }
+
+    .new1 {
+      position: relative;
+      width: 600px;
+      height: 200px;
+      border: 2px solid tomato;
+    }
+    .new2 {
+      position: absolute;
+      width: 100px;;
+      height: 100px;
+      bottom: 0px;
+      /* top: 0; */
+      /* outline: steelblue solid; */
+      border: 2px solid turquoise;
+    }
+
   </style>
 </head>
 <body>
@@ -89,7 +198,7 @@
     </div>
   </div> -->
   
-  <div class="parent">
+  <!-- <div class="parent">
     <div class="child">
       <div class="child1">
         <div >
@@ -97,18 +206,44 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- <div class="child"></div>
   <div class="child1"></div> -->
 
-  <script>    
-    const body = document.body;
-    const html = document.documentElement;
-    const height = Math.max( body.scrollHeight, body.offsetHeight, 
-                      html.clientHeight, html.scrollHeight, html.offsetHeight );
-    
-    console.log("b=>", height);
-    console.log(innerHeight)
+  <div>
+  </div>
+
+  <div class="c1">
+    <div class="c2">
+      <div class="c3">
+      </div>
+    </div>
+  </div>
+
+  <div class="c4">
+    <div class="c5">
+    </div>
+  </div>
+
+  <div class="parentt">
+    <div class="first" onclick="mf('div1')"></div>
+      <div class="second" onclick="mf('div2')"></div> 
+        <div class="third" onclick="mf('div3')"></div>
+        <!-- </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="new1">    
+  </div>
+  <div class="new2">
+  </div>
+
+  <script>
+    const mf = x => {
+      alert(x);
+      event.stopPropagation();
+    }
   </script>
 
 </body>

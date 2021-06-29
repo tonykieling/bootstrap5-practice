@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pos vs Grid</title>
+  <style>
+    /* .child {
+      position: absolute;
+      top: 0;
+    }
+
+    .child-1 {
+      left: 0;
+      border: 1px solid steelblue;
+    }
+
+    .child-2 {
+      left: 150px;
+      border: 1px solid springgreen;
+    }
+
+    .parent {
+      position: relative;
+    } */
+
+    .parent {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 150px 1fr;
+    }
+
+    .child {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .child-2 {
+      margin-left: 200px;
+    }
+  </style>
+</head>
+<body>
+  <p>Based on <a href="https://css-tricks.com/how-to-stack-elements-in-css/" target="blank">article</a> </p>
+
+  <div class="parent">
+    <h2>Parent</h2>
+  
+    <div class="child child-1">
+      <h2>Child 1</h2>
+    </div>
+  
+    <div class="child child-2">
+      <h2>Child 2</h2>
+    </div>
+  </div>
+
+</body>
+</html>
