@@ -120,15 +120,91 @@
     <section class="inside-section">
       <h2>Flexbox and Grid</h2>
       <section class="inside-section">
+        <p>They both helps to align and distribuite space among items in a container easily.</p>
         <p><b>Flexbox</b> handles one dimension at at time - row or column.</p>
         <p><b>Grid</b> works in two dimension, arraging multiple lines and columns at at time.</p>
+
+        <br>
+        <div class="fg-container">
+          <div class="fg-item1"></div>
+          <div class="fg-item2">
+            <b>Flexbox</b> layout is most appropriate to the components of an application and small-scale layouts
+          </div>
+          <div class="fg-item2">
+            <b>Grid</b> layout is intended for larger scale layouts.
+          </div>
+          <div class="fg-item1"></div>
+        </div>
+        <br>
       </section>
 
       <section class="inside-section">
         <h2 style="text-decoration: underline;">Flexbox</h2>
-        
+        <section class="inside-section">
+          <p>It uses:</p>
+          <p><b><cite>Flex Container</cite></b>, which is the parent element, and</p>
+          <p><b><cite>Flex Items</cite></b>, refering the child elements for a flexbox element.</p>
+          <p> As Flexbox elements are arrangeded in one dimension, the default direction is horizontal (X axis), but it can be changed to the vertical one (Y axis). </p>
+          <p><code style="display: inline-block;">flex-direction </code> property does that</p>
+
+          <div class="flex-picture-container">
+            <div class="flex-picture-item">
+              Flexbox concepts and terminology
+            </div>
+            <div class="flex-picture-pic">
+              <img src="./pictures/flexbox.png" style="width: 100%;">
+            </div>
+          </div>
+          <br>
+
+          <section class="inside-section">
+            <h2>Flexbox properties</h2>
+            <h3><b>Parent - Flex container</b></h3>
+            
+            <p><code style="display: inline-block;">flex</code> is a shorthand to how a flex item <b>grows</b>, <b>shrinks</b>, and <b>fits an available space.</b> These are also properties: 
+              <section class="inside-section">
+                <ul>
+                  <li>
+                    <p><code style="display: inline-block;">flex-grow</code>: a number means that the item grows to fit the space, or 0 to not grow.</p>
+                  </li>
+                  <li>
+                    <p><code style="display: inline-block;">flex-shrink</code>: when all sizes of the sibbling are greater than the available space, the default (1) will shinks them so it can fit into the container. And</p>  
+                  </li>
+                  <li>
+                    <p><code style="display: inline-block;">flex-basis</code>: the ideal size of the item.</p>
+                  </li>
+                </ul>
+              </section>
+          </section>
+          <div class="my-flexbox-parent">
+            <div class="my-flexbox-child1"></div>
+            <div class="my-flexbox-child2"><span>Link1</span></b></div>
+            <div class="my-flexbox-child2"><span>Link2</span></b></div>
+            <div class="my-flexbox-child2"><span>Link3</span></b></div>
+            <div class="my-flexbox-child1"></div>
+            
+            <!-- <div class="my-flexbox-child2">
+              33
+              <div>Another div no flex</div>
+            </div>
+            <div class="my-flexbox-child2">44</div> -->
+
+          </div>
+        </section>
+
+        <br>
+        <div
+          class="flexbox-guide-c"
+          onclick="guideToFlexbox()"
+        >
+          <div class="flexbox-guide-i">It is a link</div>
+          <div class="flexbox-guide-i">to a complete</div>
+          <div class="flexbox-guide-i">guide to</div>
+          <div class="flexbox-guide-i">Flexbox</div>
+        </div>
       </section>
   
+      <br>
       <section class="inside-section">
         <h2 style="text-decoration: underline;">Grid</h2>
       </section>
@@ -359,5 +435,12 @@
   <article>
     <h2>Website layout (w3schools</h2>
   </article>
+
+  <script>
+    const guideToFlexbox = () => {
+      console.log("guide to flexbox guide");
+
+    }
+  </script>
 </body>
 </html>
