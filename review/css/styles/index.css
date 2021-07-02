@@ -187,11 +187,14 @@ code {
 .flexbox-guide-c {
   display: flex;
   border: 1px solid yellow;
+  cursor: pointer;
 }
 .flexbox-guide-i {
   flex: 1;
   border: 1px solid tomato;
   text-align: center;
+  text-decoration: underline;
+  color: blue;
 }
 
 .fg-container {
@@ -211,3 +214,18 @@ code {
   padding: 0 1rem;
   text-align: center;
 }
+
+.flex-grid-span-properties {
+  background-color: wheat;
+  /* font-weight: bolder; */
+  /* font-style: italic; */
+  font-family: monospace, Verdana, sans-serif;
+  font-style: 1em;
+  /* padding: 0.5em; */
+  border: 3px wheat solid;
+}
+.flex-grid-li-properties {
+  margin: 1em 0;
+  list-style-type: decimal-leading-zero;
+}
+

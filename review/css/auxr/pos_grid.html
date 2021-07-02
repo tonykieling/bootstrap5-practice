@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pos_grid.css">
   <title>Pos vs Grid</title>
   <style>
     /* .child {
@@ -38,6 +39,22 @@
     .child-2 {
       margin-left: 200px;
     }
+
+    .fp {
+      display: flex;
+      border: 1px solid red;
+      height: 200px;
+      width: 200px;
+      justify-content: center;
+      align-items: center;
+    }
+    .fc {
+      border: 1px solid blue;
+      /* align-items: center; */
+      width: 100px;
+      height: 100px;
+    }
+
   </style>
 </head>
 <body>
@@ -55,5 +72,24 @@
     </div>
   </div>
 
+  <div class="f-parent">
+    <div class="f-child" style="flex: 1 1 auto;">short</div>
+    <div class="f-child" style="flex: 1 1 auto;">lonnnnnnnnnng</div>
+    <div class="f-child" style="flex: 2 1 auto;">short</div>
+    <!-- <div class="f-child">4</div> -->
+  </div>
+
+  <div class="fp">
+    <div class="fc">
+      <div class="fc" style="width: 50px; height: 50px;"></div>
+    </div>
+  </div>
+
+
+  <div class="f-p">1
+    <div class="f-c">2
+      <div class="f-c">3</div>
+    </div>
+  </div>
 </body>
 </html>
