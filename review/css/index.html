@@ -80,8 +80,8 @@
 
     <section class="inside-section">
       <h2>CSS Position</h2>
-      <p><a style="color: darkblue;" href="./auxr/position.html" alt="CSS Position" target="blank">CSS Position link</a></p>
-      <p><a style="color: darkblue;" href="./auxr/pos_grid.html" target="blank"> Position vs Grid</a></p>
+      <p><a style="color: darkblue;" href="./auxr/position.html" alt="CSS Position" target="_blank">CSS Position link</a></p>
+      <p><a style="color: darkblue;" href="./auxr/pos_grid.html" target="_blank"> Position vs Grid</a></p>
       <ul>
         <li style="margin-bottom: 1rem;"><b>Static</b> is when the element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value for any html element.</li>
         
@@ -111,8 +111,8 @@
         </div>
         <br>
 
-      <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" alt="MDN" target="blank">MDN - CSS Position</a></p>
-      <p>Source: <a href="https://www.youtube.com/watch?v=P6UgYq3J3Qs" alt="Youtube" target="blank">Youtube video</a></p>
+      <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" alt="MDN" target="_blank">MDN - CSS Position</a></p>
+      <p>Source: <a href="https://www.youtube.com/watch?v=P6UgYq3J3Qs" alt="Youtube" target="_blank">Youtube video</a></p>
     </ul>
   </section class="inside-section">
 
@@ -164,19 +164,22 @@
               <h3><b>Parent - Flex Container</b></h3>
               <ol>
                 <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">display: flex; /* or inline-flex */</span> -- sets the element to be a flex one.</li>
+                <section class="inside-section">
+                    Difference between <cite style="text-decoration: underline;">flex</cite> and <cite style="text-decoration: underline;">inline-flex:</cite><br>
+                    <img src="./pictures/flex_inline-flex.png" width="50%">
+                </section>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-direction: row | row-reverse | column | column-reverse;</span> -- defines the directions for its items.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-direction: row | row-reverse | column | column-reverse;</span> defines the directions for its items.</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-wrap: nowrap | wrap | wrap-reverse;</span> -- by default all items will try to fit in one line, but this property can change this behaviour.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-wrap: nowrap | wrap | wrap-reverse;</span> by default all items will try to fit in one line, but this property can change this behaviour.</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-flow: column wrap;</span> -- it is a short for <i>flex-direction</i> and flex-wrap.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-flow: column wrap;</span> it is a short for <i>flex-direction</i> and flex-wrap.</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
-                </span> -- it distributes space along the main axis.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;</span> it distributes space along the main axis - horizontally.</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;</span> -- how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;</span> how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis - vertically).</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;</span> -- aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. <br><b>!!!!!</b> This property only takes effect on multi-line flexible containers, where flex-flow is set to either wrap or wrap-reverse). A single-line flexible container (i.e. where flex-flow is set to its default value, no-wrap) will not reflect align-content.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;</span> aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. <br><b>!!!!!</b> This property only takes effect on multi-line flexible containers, where flex-flow is set to either wrap or wrap-reverse). A single-line flexible container (i.e. where flex-flow is set to its default value, no-wrap) will not reflect align-content.</li>
               </ol>
             </section>
 
@@ -184,23 +187,22 @@
               <br>
               <h3><b>Children - Flex Items</b></h3>
               <ol>
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">order: 2;</span> -- when applied for each item individually, it changes the order that the element are presented in the elements flow.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">order: 2;</span> when applied for each item individually, it changes the order that the element are presented in the elements flow.</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-grow: 2; /* default 0*/</span> -- This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.<br>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-grow: 2; /* default 0*/</span> This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.<br>
                 If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-shrink: 3; /* default 1 */</span> -- it enables a flex item to shrink, if necessary.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-shrink: 3; /* default 1 */</span> it enables a flex item to shrink, if necessary.</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-basis:  | auto; /* default auto */</span> -- defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property”. The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.<br>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex-basis:  | auto; /* default auto */</span> defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property”. The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.<br>
                 If set to 0, the extra space around content isn’t factored in. If set to auto, the extra space is distributed based on its flex-grow value. See below.
                 <div style="display: flex; justify-content: center;">
                   <img src="./pictures/rel-vs-abs-flex.svg" width="60%"></li>
                 </div>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
-                </span> -- short for <i>flex-grow</i>, <i>flex-shrink</i>, and <i>flex-basis</i>. The default is 0 1 auto</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];</span> short for <i>flex-grow</i>, <i>flex-shrink</i>, and <i>flex-basis</i>. The default is 0 1 auto</li>
 
-                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">align-self: auto | flex-start | flex-end | center | baseline | stretch;</span> -- it allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. More info on align-items.</li>
+                <li class="flex-grid-li-properties"><span class="flex-grid-span-properties">align-self: auto | flex-start | flex-end | center | baseline | stretch;</span>  it allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. More info on align-items.</li>
               </ol>
             </section>
           </section>
@@ -208,6 +210,7 @@
         
         <br>
         <h3>Flexbox examples:</h3>
+        <a href="./auxr/flex.html" target="_blank">Flexbox practice</a>
         <div class="my-flexbox-parent">
           <div class="my-flexbox-child1"></div>
           <div class="my-flexbox-child2"><span>Link1</span></b></div>
@@ -463,7 +466,7 @@
   <script>
     const guideToFlexbox = () => {
       console.log("guide to flexbox guide");
-      window.open("https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-properties", "blank");
+      window.open("https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-properties", "_blank");
 
     }
   </script>
