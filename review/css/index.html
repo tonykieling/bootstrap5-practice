@@ -35,12 +35,14 @@
       <h3 class="top-margin">Box Model Properties:</h3>
       <section class="inside-section">
         <div>
-          <div style="display: inline-block; outline: 1px solid rgb(10, 121, 121);">
-            <li><b>Height</b> is relative to the vertical size of an element's content.</li>
-            <li><b>Width</b> is the horizontal size of that element.</li>
+          <div style="display: flex;">
+            <div style="outline: 1px solid rgb(10, 121, 121);">
+              <li><b>Height</b> is relative to the vertical size of an element's content.</li>
+              <li><b>Width</b> is the horizontal size of that element.</li>
+            </div>
+            <div style="align-self: center; padding-left: 1rem; text-decoration: underline; color: maroon;">they change the size of block elements</div>
           </div>
           <!-- waiting for flexbox or grid to center this span in the middle (vertically) -->
-          <span style="display: inline-block;">they change the size of block elements</span>
         </div>
         <li><b>Margin</b> is the space around the border of an element. It is always transparent.</li>
         <li><b>Border</b> is the framework around the content. It can be colored and in diff forms such as solid and pointed.</li>
@@ -104,7 +106,7 @@
         <br>
 
         <div style="border: 1px solid blue; padding: 1rem;">
-          <p style="color: red; font-size: larger;">Heads up!! </p>
+          <p style="color: darkred; font-size: larger; font-weight: bolder;">Heads up!! </p>
           <cite><b>z-index</b></cite> works regarding the context. It means that it may not work properly, specialy in situations like child elements, or depends the type of position being used.</p>
           <p>
           <p>One good output is when all elements are sibblings of a parent element, which means that there is a context to be applied for the sibblings.</p>
@@ -128,10 +130,10 @@
         <div class="fg-container">
           <div class="fg-item1"></div>
           <div class="fg-item2">
-            <b>Flexbox</b> layout is most appropriate to the components of an application and small-scale layouts
+            Flexbox layout is more appropriate to the components of an application and small-scale layouts
           </div>
           <div class="fg-item2">
-            <b>Grid</b> layout is intended for larger scale layouts.
+            Grid layout is intended for larger scale layouts.
           </div>
           <div class="fg-item1"></div>
         </div>

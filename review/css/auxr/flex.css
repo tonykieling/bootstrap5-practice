@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 100%;
 }
 
 .header1 {
@@ -105,20 +106,22 @@ body {
 .box-container {
   /* margin: 1rem; */
   display: flex;
-  flex-direction: column;
-  /* height: 100%; */
+  flex-flow: column;
+  /* align-content: stretch; */
+  height: 100%;
 }
 .box {
   /* display: flex;
   align-items: stretch; */
   background-color: blue;
-  display: flex;
+  flex: 1 1 auto;
+  /* display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 1; */
   /* justify-content: center; */
   /* align-items: center; */
-  text-align: center;
-  flex: 1 1 auto;
+  /* text-align: center;
+  flex: 1 1 auto; */
   /* margin: auto; */
   /* width: 30px;
   height: 100px; */

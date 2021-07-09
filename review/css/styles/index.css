@@ -199,7 +199,8 @@ code {
 
 .fg-container {
   display: flex;
-  /* align-items: center; */
+  align-items: stretch;
+  /* align-content: center; */
   /* background-color: blue; */
 }
 .fg-item1 {
@@ -208,11 +209,13 @@ code {
   /* background-color: green; */
 }
 .fg-item2 {
+  display: flex;
   flex: 1 1 200px;
   border: 1px solid black;
   background-color: tomato;
   padding: 0 1rem;
   text-align: center;
+  align-items: center
 }
 
 .flex-grid-span-properties {
