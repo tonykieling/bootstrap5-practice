@@ -48,7 +48,7 @@
         <li><b>Border</b> is the framework around the content. It can be colored and in diff forms such as solid and pointed.</li>
         <li><b>Padding</b> is the space around the content of an element.</li>
 
-        <p><cite><b>box-sizing: border-box</b></cite> changes the size of the box to the size of the actual content box (which will shrink it).</p>
+        <p><cite><b>box-sizing: border-box</b></cite> changes the size of the box to the size of the actual content box, including the border - which will shrink the content.</p>
       </section>
     </section>
 
@@ -236,6 +236,7 @@
       <br><br>
       <section class="inside-section">
         <h2 style="text-decoration: underline;">Grid</h2>
+        <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">A Complete Guide to Grid</a>
       </section>
 
     </section>
@@ -245,10 +246,21 @@
   <article>
     <h2>3- CSS Units</h2>
     <section class="inside-section">
-
+      <h2 style="text-decoration: underline;">Absolute Units</h2>
+      <img src="./pictures/absolute-units.png" class="img-units">
+    
+      <h2 style="text-decoration: underline;">Relative Units</h2>
+      <img src="./pictures/relative-units.png" class="img-units">
+      
+      <h4>Takeaway</h4>
+      <p>Important to note the difference between</p>
+      <ul>
+        <li><span style="font-weight: bolder; text-decoration: underline;">em:</span> regarding the font-size of the immediate parent's element. And</li>
+        <li><span style="font-weight: bolder; text-decoration: underline;">rem:</span> regarding the font-size of the root element (&lthtml&gt)</li>
+      </ul>
     </section>
   </article>
-
+  
   <article>
     <h2>1- Nesting selectors</h2>
     <section class="inside-section">
@@ -269,8 +281,13 @@
           &ltdiv class="descendent-selector">
             &ltp>Test - with style&lt/p>
           &lt/div>
-          &ltp>Test - without style&lt/p>&ltdiv class="descendent-selector">
-            &ltp>Test - with style&lt/p>
+          &ltp>Test - without style&lt/p>
+          &ltdiv class="descendent-selector">
+            &ltsection class="extra-space"> // COMMENT: adition tag, but it does NOT affect the output
+              &ltb> // COMMENT: one more extra tag, no changes for this type of selector
+                &ltp>Test - with style and bolded&lt/p>
+              &lt/b>
+            &lt/section>
           &lt/div></pre>
         CSS:
         <pre>
@@ -278,6 +295,9 @@
             margin: 0;
             background-color: blue;
             color: darkred;
+          }
+          .extra-space { 
+            margin-left: 5rem;
           }</pre>
       </code>
   
@@ -288,7 +308,9 @@
         </div>
         <p>Test - without style</p>
         <div class="descendent-selector">
-          <p>Test - with style</p>
+          <section class="extra-space">
+              <b><p>Test - with style and bolded></p></b>
+          </section>
         </div>
       </code>
     
@@ -338,7 +360,7 @@
           &ltp>'p' line 6 outside, right after, a 'div'&lt/p></pre>
         CSS:
         <pre>
-          div + p {
+          div + .p-class {
             background-color: sandybrown;
             text-align: center;
           }
@@ -356,7 +378,7 @@
         <div>
           <p>'p' line 5 inside 'div'</p>
         </div>
-        <p>'p' line 6 outside, right after, a 'div'</p>
+        <p class="p-class">'p' line 6 outside, right after, a 'div'</p>
       </code>
 
       <!-- example of general sibling selector -->
@@ -405,7 +427,7 @@
         </pre>
         CSS:
         <pre>
-          .ex1 {
+          div.ex1 {
             color: white;
           }
           .ex2 {
@@ -460,6 +482,59 @@
     <p>*** More info about Pseudo-classes at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">MDN Pseudo-Classes</a></p>
   </article>
 
+  <article>
+    <h2>General</h2>
+    <section class="inside-section">
+      <h3>How to center in CSS</h3>
+        <ul>
+          <li>
+            Give the element a <cite>display: block</cite>, <cite>margin-left: auto</cite> and <cite>margin-right: auto</cite>
+          </li>
+          <li>Place the element inside a div that has <cite>text-align: center</cite></li>
+          <li>Using Flexbox</li>
+          <li>Using Grid</li>
+          More info about this at <a href="https://blog.hubspot.com/website/center-an-image-in-html" target="_blank">How to Center an Image in HTML & CSS</a>
+        </ul>
+
+      <br>
+      <h3>How to have a text using CSS</h3>
+      <p>Using <cite>:after</cite> pseudoclass and <cite>content</cite> property.</p>
+
+      <br>
+      <h3>Example of CSS centering and CSS Text</h3>
+      <span><b>Code</b></span>
+      <code>
+        HTML:
+        <pre>
+          &ltdiv class="box-text-parent">
+            &ltdiv class="box-text">&lt/div>
+          &ltdiv>
+        </pre>
+        CSS:
+        <pre>
+          .box-text-parent {
+            display: flex;
+            justify-content: center;
+          }
+          .box-text {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            background-color: darkred;
+            padding: 2rem;
+          }
+          .box-text:after {
+            content: "this is a div with text coming from CSS";
+          }
+        </pre>
+      </code>
+  
+      <span><b>Output:</b></span>
+      <div class="box-text-parent">
+        <div class="box-text"></div>
+      </div>
+    </section>
+  </article>
 
   <article>
     <h2>Website layout (w3schools</h2>

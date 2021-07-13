@@ -98,7 +98,7 @@ code {
 
 .nesting-items {
   font-weight: bold;
-  color: red;
+  color: blue;
 }
 
 /* descendent selector CSS */
@@ -106,6 +106,9 @@ code {
   margin: 0;
   background-color: blue;
   color: darkred;
+}
+.extra-space {
+  margin-left: 5rem;
 }
 
 /* child selector CSS */
@@ -115,7 +118,7 @@ div > .span-temp {
 }
 
 /* Adjacent sibling selector */
-div + p {
+div + .p-class {
   background-color: sandybrown;
   text-align: center;
 }
@@ -141,9 +144,10 @@ code {
   background-color: lightyellow;
 }
 
-.ex1 {
+div.ex1 {
   color: white;
 }
+
 .ex2 {
   background-color: black;
 }
@@ -232,3 +236,26 @@ code {
   list-style-type: decimal-leading-zero;
 }
 
+.img-units {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  min-width: 350px;
+  max-width: 700px;
+}
+
+.box-text-parent {
+  display: flex;
+  justify-content: center;
+}
+.box-text {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: rgb(194, 197, 26);
+  padding: 2rem;
+}
+.box-text:after {
+  content: "this is a div with text coming from CSS";
+}
