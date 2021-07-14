@@ -10,9 +10,70 @@
 </head>
 <body>
 
+  <div id="summary"></div>
   <h1 class="main-title">CSS review</h1>
 
   <article>
+    <section class="inside-section">
+      <div class="summary">
+        <div class="summ-parent">
+          <h2 class="summ-child" style="text-align: center;">Summary</h2>
+          <ol class="summ-child">
+            <li
+              class="move-links sum"
+              onclick="moveTo('1-box-model')"          
+            >CSS Box-model</li>
+            <li
+              class="move-links sum"
+              onclick="moveTo('2-css-position')"          
+            >CSS Position</li>
+  
+            <div
+              class="move-links sum sub"
+              onclick="moveTo('2.1-flexbox')"          
+            >FlexBox</div>
+            <div
+              class="move-links sum sub"
+              onclick="moveTo('2.2-grid')"          
+            >Grid</div>
+            
+            <li
+              class="move-links sum"
+              onclick="moveTo('3-css-units')"          
+            >CSS Units</li>          
+  
+            <li
+              class="move-links sum"
+              onclick="moveTo('4-nesting-selectors')"          
+            >Nesting Selectors</li>
+            
+            <li
+              class="move-links sum"
+              onclick="moveTo('5-pseudo-class')"          
+            >Pseudo-class Selectors</li>          
+  
+            <li
+              class="move-links sum"
+              onclick="moveTo('x-general')"          
+            >General</li>
+  
+            <li
+              class="move-links sum"
+              onclick="moveTo('x-web-layout')"
+            >Web layout</li>
+  
+          </ol>
+        </div>
+
+        </div>
+    </section>
+  </article>
+  <article>
+    <div
+      id="1-box-model"
+      class="move-links"
+      onclick="moveTo('summary')"
+    >Top page &#9650;</div>
     <h2>1- CSS Box Model</h2>
     <section class="inside-section">
       <p>HTML elements can be considered boxes.</p>
@@ -77,6 +138,11 @@
   </article>
 
   <article>
+    <div
+      id="2-css-position"
+      class="move-links"
+      onclick="moveTo('summary')"
+    >Top page &#9650;</div>
     <h2>2- CSS Layout</h2>
 
 
@@ -120,6 +186,11 @@
 
   <article>
     <section class="inside-section">
+      <div 
+        id="2.1-flexbox"
+        class="move-links"
+        onclick="moveTo('summary')"
+      >Top page &#9650;</div>
       <h2>Flexbox and Grid</h2>
       <section class="inside-section">
         <p>They both helps to align and distribuite space among items in a container easily.</p>
@@ -235,6 +306,11 @@
   
       <br><br>
       <section class="inside-section">
+        <div
+          id="2.2-grid"
+          class="move-links"
+          onclick="moveTo('summary')"
+        >Top page &#9650;</div>
         <h2 style="text-decoration: underline;">Grid</h2>
         <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">A Complete Guide to Grid</a>
       </section>
@@ -244,6 +320,11 @@
   </article>
 
   <article>
+    <div
+      id="3-css-units"
+      class="move-links"
+      onclick="moveTo('summary')"
+    >Top page &#9650;</div>
     <h2>3- CSS Units</h2>
     <section class="inside-section">
       <h2 style="text-decoration: underline;">Absolute Units</h2>
@@ -262,6 +343,11 @@
   </article>
   
   <article>
+    <div
+      id="4-nesting-selectors"
+      class="move-links"
+      onclick="moveTo('summary')"
+    >Top page &#9650;</div>
     <h2>1- Nesting selectors</h2>
     <section class="inside-section">
       <p>There are 4 types of combinators in CSS:</p>
@@ -449,6 +535,11 @@
 
   <!-- Pseudo-class article -->
   <article>
+    <div
+      id="5-pseudo-class"
+      class="move-links"
+      onclick="moveTo('summary')"
+    >Top page &#9650;</div>
     <h2>2- Pseudo-class selectors</h2>
     <section class="inside-section">
       <p>They are used to define a special state  of an element, such as hover, focus, visited links and so on.</p>
@@ -483,6 +574,11 @@
   </article>
 
   <article>
+    <div
+      id="x-general"
+      class="move-links"
+      onclick="moveTo('summary')"
+    >Top page &#9650;</div>
     <h2>General</h2>
     <section class="inside-section">
       <h3>How to center in CSS</h3>
@@ -537,6 +633,11 @@
   </article>
 
   <article>
+    <div
+      id="x-web-layout"
+      class="move-links"
+      onclick="moveTo('summary')"
+    >Top page &#9650;</div>
     <h2>Website layout (w3schools</h2>
   </article>
 
@@ -544,8 +645,14 @@
     const guideToFlexbox = () => {
       console.log("guide to flexbox guide");
       window.open("https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-properties", "_blank");
-
     }
+
+    const moveTo = target => {
+      console.log("moving to...", target);
+      const e = document.getElementById(target);
+      e.scrollIntoView({ behavior: "smooth" });
+    }
+    
   </script>
 </body>
 </html>

@@ -259,3 +259,26 @@ div.ex1 {
 .box-text:after {
   content: "this is a div with text coming from CSS";
 }
+
+.move-links {
+  /* margin-left: 1rem; */
+  cursor: pointer; 
+  text-decoration: underline; 
+  color: darkblue;
+  /* scroll-behavior: smooth; */
+}
+.move-links.sum {
+  margin-left: 1rem;
+}
+.move-links .sum .sub {
+  margin-left: 1rem;
+}
+
+.summ-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summ-child {
+  /* align-items: ; */
+}
