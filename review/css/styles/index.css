@@ -1,4 +1,8 @@
 /* all document */
+html {
+  margin: 2rem;
+}
+
 body {
   background-color: cadetblue;
   padding: 1rem;
@@ -279,6 +283,8 @@ div.ex1 {
   align-items: center;
   justify-content: center;
 }
-.summ-child {
-  /* align-items: ; */
+
+.sass-pict {
+  position: relative;
+  width: 85%;
 }
