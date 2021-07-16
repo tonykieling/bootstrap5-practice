@@ -5,7 +5,7 @@
 }
 
 .main-icon {
-  width: 50px;
+  width: 30px;
 }
 
 * {
@@ -15,7 +15,7 @@
 
 body {
   min-height: 100vh;
-  background-color: lightgreen;
+  background-color: lightblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   flex-direction: column;
@@ -53,8 +53,14 @@ main {
 }
 
 main h1 {
-  box-sizing: border-box;
+  box-sizing: padding-box;
+  padding-top: 2rem;
   text-align: center;
+}
+
+main h1::after {
+  content: "";
+  padding-top: 2rem;
 }
 
 main .img-container {
@@ -67,6 +73,7 @@ main .img-container img {
 }
 
 .nav-menu {
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,18 +81,16 @@ main .img-container img {
 
 .nav-menu-items {
   display: flex;
-  justify-content: space-around;
-  margin-left: 7rem;
   list-style-type: none;
-  padding-right: 3rem;
+  padding-right: 10rem;
 }
 
 .nav-menu li {
-  padding-left: 3rem;
+  padding-left: 5rem;
 }
 
-.nav-menu a {
-  margin-left: 1rem;
+.nav-menu > a {
+  margin-left: 4rem;
 }
 
 .nav-menu a:hover {

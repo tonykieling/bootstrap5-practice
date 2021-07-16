@@ -419,7 +419,7 @@
     
 
       <!-- example of child selector -->
-      <div class="examples">Example 2 - child selector: +</div>
+      <div class="examples">Example 2 - child selector: ></div>
       <span><b>Code</b></span>
       <code>
         HTML:
@@ -446,7 +446,7 @@
       </code>
 
       <!-- example of sibling selector -->
-      <div class="examples">Example 3 - adjacent sibling selector: ~</div>
+      <div class="examples">Example 3 - adjacent sibling selector: +</div>
       <span><b>Code</b></span>
       <code>
         HTML:
@@ -485,7 +485,7 @@
       </code>
 
       <!-- example of general sibling selector -->
-      <div class="examples">Example 4 - general sibling selector</div>
+      <div class="examples">Example 4 - general sibling selector: ~</div>
       <span><b>Code</b></span>
       <code>
         HTML:
@@ -686,27 +686,34 @@
 
           <li style="margin-top: 2rem;">
             <p><b>Nesting:</b> it avoids repeating the parent selector in the children. That means, it creates a sort of scope using curle braces - when using SCSS syntax.</p>
+            <p>The use of <b style="color: blue;">&</b> it is also common and usuful because it is a shortcut for the parent element.</p>
+            <div class="sass-center-fig">
+              <figure>
+                <img src="./pictures/sass-&.png" width="50%">
+                <figcaption>Using & to call parent element</figcaption>
+              </figure>
+            </div>
           </li>
 
           <li style="margin-top: 2rem;">
             <p><b>Modules / parsing:</b> allows break the code in multiple files. It is different from CSS import, because it will make a HTTP request from each one. Recalling that Sass will create a CSS file and it will be available once.</p>
             <p>A file has to be named as <b style="color: blue;">_&ltfile-name>.scss</b>. It means this file is exported and that the compiler will not compile that file.</p>
-            <p>The statement <b style="color: blue;">@use "&ltfile-name>"</b> will load the whole file and 'paste' it in the current one.</p>
+            <p>The statement <b style="color: blue;">@import "&ltfile-name>"</b> will load the whole file and 'paste' it in the current one.</p>
           </li>
 
           <li style="margin-top: 2rem;">
             <p><b>Mixins and Functions</b> allows us to create blocks of CSS which will run like a function.</p>
-            <p>The main diff btw them is that functions runs stuff and retun something, while mixins just runs the code. Also, mixins need the word <b style="color: blue;">@include</b>, while functions do not.</p>
+            <p>The main diff btw them is that functions runs stuff and retun something, while mixins just runs the code. Also, mixins need the word <b style="color: blue;">@include</b>, while functions do not. When using a function, it is straightforward just calling it as a value and setting its parameter. For example: <b style="color: blue;">color: my-function(bg-color)</b>.</p>
             <div class="sass-center-fig">
               <figure>
-                <img src="./pictures/mixin-example.png" width="95%">
+                <img src="./pictures/sass-mixin-example.png" width="95%">
                 <figcaption>Mixins example</figcaption>
               </figure>
             </div>
 
             <div class="sass-center-fig">
               <figure>
-                <img src="./pictures/mixin-example.png" width="95%">
+                <img src="./pictures/sass-function-example.png" width="95%">
                 <figcaption>Function example</figcaption>
               </figure>
             </div>
@@ -764,6 +771,8 @@
       onclick="moveTo('summary')"
     >Top page &#9650;</div>
     <h2>Website layout (w3schools</h2>
+    <iframe src="https://resume.creddle.io/embed/hqaeq2fbnr6"
+  width="854" height="1104" seamless></iframe>
   </article>
 
   <script>

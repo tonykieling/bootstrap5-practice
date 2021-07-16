@@ -1,3 +1,0 @@
-[submodule "myapp"]
-	path = myapp
-	url = ./review/react/myapp/
