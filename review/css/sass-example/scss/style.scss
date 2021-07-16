@@ -1,0 +1,132 @@
+$primary-bck-color: lightgreen;
+$primary-ft-color: darkblue;
+$main-font-family: Verdana, Geneva, Tahoma, sans-serif;
+$main-font-size: 1rem;
+$header-footer-color: gray;
+
+%img-settings {
+  width: 50%;
+  border: 1px solid green;
+  box-sizing: border-box;
+  // padding: 0.5rem;
+}
+
+%icon {
+  width: 50px;
+  // border: 1px wheat solid;
+  // border-radius: 50%;
+  // padding: 0.15rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  min-height: 100vh;
+  background-color: $primary-bck-color;
+  font-family: $main-font-family;
+  display: flex;
+  flex-direction: column;
+
+  // one way to se background-image
+  // but need to get it oppacity in the source file
+  // background-image: url("../img/main-1.jpeg");
+  // background-image: url("../img/main-2.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+}
+
+header {
+  background-color: $header-footer-color;
+}
+
+p {
+  font-family: $main-font-family;
+}
+
+h1 {
+  color: $primary-ft-color;
+  font-size: $main-font-size * 3;
+}
+
+// footer {
+//   // margin-top: auto;
+// }
+
+.footer {
+  display: flex;
+  background-color: $header-footer-color;
+  justify-content: space-evenly;
+  padding: 2rem 10rem;
+}
+
+.img-main {
+  @extend %img-settings;
+  width: 20vw;
+  opacity: 50%;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    box-sizing: border-box;
+    // padding-top: 2rem;
+    text-align: center;
+  }
+
+  // .img-container {
+  //   background-image: url("./img/main-2.jpg");
+  //   width: 100%;
+  //   height: 100%;
+  // }
+  .img-container {
+    // border: 2px solid red;
+    
+    display: flex;
+    justify-content: center;
+
+    img {
+      opacity: 50%;
+    }
+  }
+}
+
+.main-icon {
+  @extend %icon;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-items {
+    display: flex;
+    justify-content: space-around;
+    // flex: 1 0 auto;
+    margin-left: 7rem;
+    list-style-type: none;
+    padding-right: 3rem;
+  }
+
+  li {
+    padding-left: 3rem;
+  }
+
+  a {
+    margin-left: 1rem;
+  }
+
+  a:hover{
+    cursor: pointer;
+    background-color: yellow * 0.5;
+  }
+}
+

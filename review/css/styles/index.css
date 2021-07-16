@@ -284,7 +284,7 @@ div.ex1 {
   justify-content: center;
 }
 
-.sass-pict {
-  position: relative;
-  width: 85%;
+.sass-center-fig {
+  display: flex;
+  justify-content: center;
 }

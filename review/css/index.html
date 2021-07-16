@@ -68,7 +68,7 @@
             <li
               class="move-links sum"
               onclick="moveTo('x-sass')"          
-            >SASS
+            >Sass
             </li>
 
             <li
@@ -655,27 +655,104 @@
       class="move-links"
       onclick="moveTo('summary')"
     >Top page &#9650;</div>
-    <h2>SASS</h2>
+    <h2>Sass</h2>
     <section class="inside-section">
-      <p>SASS stands for Syntactically Awesome Style Sheets.</p>
-      <p>It is a programming language built on top of CSS syntax that generates CSS code. It has two main forms: <b>SASS</b> which does not use semicolons (;) nor curle braces ({ and }) - instead it uses identation, and <b>SCSS</b> which uses that.</p>
+      <p>Sass stands for Syntactically Awesome Style Sheets.</p>
+      <p>It is a programming language built on top of CSS syntax that generates CSS code. It has two main forms: <b>Sass</b> which does not use semicolons (;) nor curle braces ({ and }) - instead it uses identation, and <b>SCSS</b> which uses that.</p>
       <p>Example with some differences</p>
-      <div>
+      <div class="sass-center-fig">
         <figure>
-          <div>
-            <img src="./pictures/sass-diff.png" alt="SASS and CSS" class="sass-pict">
-            <figcaption style="text-align: left;">Examples of SCSS, SASS and CSS files</figcaption>
-          </div>
+          <img src="./pictures/sass-diff.png" alt="SASS and CSS" width="95%">
+          <figcaption style="text-align: left; font-size: calc(1em * 0.9);">Examples of SCSS, SASS and CSS files</figcaption>
         </figure>
       </div>
-      <p>variables, nesting (& can get child and siblings - see sass-&.png, mixins (and include keyword), if/conditions/loops, functions (??? diff btw mixions and functions ???), </p>
+
+      <h3>Instalation and usage</h3>
+      <section class="inside-section">
+        <p>Install with <cite><b>npm i -g sass</b></cite>.</p>
+        <p>It works compiling a Sass souce file into a CSS one.</p>
+        <p>It can be done via command line: <cite><b>sass --watch &ltsource-file-dot-sass> &ltoutput-file-dot-css></b></cite>, and also</p>
+        <p>VSCode extension called <b style="color: blue;">Live Sass Compiler</b> which is pretty straightforward to use. Just click on "Watch Sass" button and the file will foloow the setting and generate a live Sass file.</p>
+      </section>
+
+
+      <h3>Sass features</h3>
+
+      <section class="inside-section">
+        <ul>
+          <li style="margin-top: 1rem;">
+            <p><b>Variables:</b> are defined using $. They define a value and it will be shared along the file. CSS has it called by custom properties.</p>
+          </li>
+
+          <li style="margin-top: 2rem;">
+            <p><b>Nesting:</b> it avoids repeating the parent selector in the children. That means, it creates a sort of scope using curle braces - when using SCSS syntax.</p>
+          </li>
+
+          <li style="margin-top: 2rem;">
+            <p><b>Modules / parsing:</b> allows break the code in multiple files. It is different from CSS import, because it will make a HTTP request from each one. Recalling that Sass will create a CSS file and it will be available once.</p>
+            <p>A file has to be named as <b style="color: blue;">_&ltfile-name>.scss</b>. It means this file is exported and that the compiler will not compile that file.</p>
+            <p>The statement <b style="color: blue;">@use "&ltfile-name>"</b> will load the whole file and 'paste' it in the current one.</p>
+          </li>
+
+          <li style="margin-top: 2rem;">
+            <p><b>Mixins and Functions</b> allows us to create blocks of CSS which will run like a function.</p>
+            <p>The main diff btw them is that functions runs stuff and retun something, while mixins just runs the code. Also, mixins need the word <b style="color: blue;">@include</b>, while functions do not.</p>
+            <div class="sass-center-fig">
+              <figure>
+                <img src="./pictures/mixin-example.png" width="95%">
+                <figcaption>Mixins example</figcaption>
+              </figure>
+            </div>
+
+            <div class="sass-center-fig">
+              <figure>
+                <img src="./pictures/mixin-example.png" width="95%">
+                <figcaption>Function example</figcaption>
+              </figure>
+            </div>
+          </li>
+            
+          <li style="margin-top: 2rem;">
+            <p><b>Inheritance:</b> enables pieces of code to be shared among multiple classes.</p>
+            <p>The code to be reused has to be like a class named as <b style="color: blue;">%&ltclass-name></b>.</p>
+            <p>The word <b style="color: blue;">@extend %&ltclass-name></b> pastes the content of that in the current selector/class.</p>
+
+            7:25
+          </li>
+
+          <li style="margin-top: 2rem;">
+            <p><b>Operators</b> perform math opertions and deliver the final value to the CSS file.</p>
+          </li>
+
+          <li style="margin-top: 2rem;">
+            <p><b>Conditions</b></p>
+            <div class="sass-center-fig">
+              <figure>
+                <img src="./pictures/sass-conditions.png" width="95%">
+                <figcaption>Condition example</figcaption>
+              </figure>
+            </div>
+          </li>
+
+
+          <li style="margin-top: 2rem;">
+            <p><b>How does it work?</b></p>
+            <p>A possible customization, using VSCode, will keep watching the edition of the Sass file, and generating a clean CSS file, optionally minified. </p>
+            <p><span style="text-decoration: underline;">More info</span> can be found at <a href="https://www.youtube.com/watch?v=nu5mdN2JIwM">Sass - Crash Course</a>. At 15 minutes there is some details about settings on VSCode.</p>
+          </li>
+
+          
+          </li>
+        </ul>
+      </section>
+      <p>variables, nesting (& can get child and siblings - see Sass-&.png, mixins (and include keyword), if/conditions/loops, functions (??? diff btw mixions and functions ???), </p>
       <h3>Important topics</h3>
       <section class="inside-section">
         variables
         nesting
         mixins
         functions
-        
+
       </section>
     </section>
   </article>
