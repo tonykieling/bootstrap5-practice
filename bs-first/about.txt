@@ -1,0 +1,17 @@
+- based on https://www.youtube.com/watch?v=I7CfaDYzTVM
+
+- bootstrap instalation by npm, so it can be customized.
+
+# npm i bootstrap@5.0.0-alpha1
+# npm i bootstrap-icons
+
+- the customization has to be made on the project's own directory, instead of directly in the boostrap one because if bootstrap is updated, it will overwrite the customization.
+
+
+- key points:
+  - installing bootstrap5 by npm
+  - bootstrap icons
+  - utilities
+  - custom properties
+  - popper is needed for tooltips and popovers. It may be instaleed in the same bundle or in a separated one. Also, we may not need it.
+  - the video approached also some diff btw v4 and v5 and the new features of v5

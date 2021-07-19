@@ -1,0 +1,17 @@
+$utilities: () !default;
+$utilities: map-merge(
+  (
+    "input-padding": (
+      property: padding,
+      class: ip,
+      values: (
+        0: 0,
+        1: 0.3rem,
+        2: 0.5rem,
+        3: 0.7rem,
+        5: 1rem
+      ),
+    ),
+  ),
+  $utilities 
+);
