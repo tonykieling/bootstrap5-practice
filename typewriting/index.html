@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Typewriting</title>
+  <style>
+    .bash {
+      background-color: black;
+      color: gray;
+      font-family: Consolas,Monaco, Lucida;
+    }
+    .x-chars {
+      color: chartreuse;
+      /* font-size: 20px; */
+      overflow: hidden;
+      width: 2ch;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div style="display: none;">
+    <span class="s1" id="prefix">www </span>
+  </div> -->
+  <div class="anyone" style="background-color: black; width: 17rem; height: 6rem;">
+    <p id="1" class="bash x-chars">asdasdasd</p>
+    <p id="2" class="bash x-chars">asdasdasd</p>
+    <p id="3" class="bash x-chars">asdasdasd</p>
+    <!-- <div>
+      <span id="s1"></span><span id="1" class="bash"></span>
+    </div>
+    <div>
+      <span id="s2"></span><span id="2" class="bash"></span>
+    </div>
+    <div>
+      <span id="s3"></span><span id="3" class="bash"></span>
+    </div> -->
+  </div>
+  <script>
+
+    // const prefix = document.getElementById("prefix");
+    // console.log("prefix", prefix);
+
+    // it is just the core of how it works
+    // Im gonna do it using react later and play with different styles and settings
+
+    document.addEventListener('DOMContentLoaded',function(event){
+
+      const typing = _ => {
+        const dataText = ["He llo!", "Second line", "Third and last line"];
+
+        const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+        const output = async (stg, delay) => {
+          let count = 0;
+
+          while (count < dataText.length) {
+            const element = document.getElementById(count + 1);
+
+            const i = document.getElementById(`s${count + 1}`);
+            console.log("i", i);
+            i.appendChild(prefix);
+
+            const text = dataText[count];
+            
+            for (const c of text) {
+              // const tempText = element.innerText;
+              // element.innerHTML = `${tempText}${c === " " ? `&nbsp` : c}`;
+              const n = document.createElement("span");
+              n.innerHTML = c;
+              console.log("n", n);
+              element.appendChild(n);
+              await wait(delay);
+            }
+
+            count++;
+          }
+
+          
+        }
+
+        output(dataText, 150);
+      }
+      
+      // typing();
+    });
+  </script>
+</body>
+</html>
